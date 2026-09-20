@@ -1,0 +1,78 @@
+#content {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px 150px 80px;
+    border: 1px solid lightgrey;
+}
+
+#header {
+    text-transform: uppercase;
+}
+
+#title {
+    font-family: "Taviraj", serif;
+    font-weight: 500;
+    font-style: normal; 
+    padding-top: 60px;
+    text-align: center;
+    letter-spacing: 4px;
+    line-height: 25px;
+    font-size: 30px;
+    margin-bottom: 26px;
+}
+
+#name {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 11px;
+    font-width: 10px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #2d8ccc;
+}
+
+.page-line {
+    border: none;
+    height: 0.1px;
+    background-color: lightgrey;
+    width: 100%;
+    justify-content: center;
+    margin-top: -10px;
+}
+
+#foundation-statement {
+    margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: .8px;
+    font-weight: 500;
+    text-shadow: 0.2px 0 currentColor;
+}
+
+.logo {
+    padding-top: 35px;
+    display: block;
+    max-width: 120px;
+    margin: 0 auto;
+}
+
+#intro {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.list-title {
+    font-style: italic;
+}
+
+#principles {
+    padding-left: 25px;
+}
+
+#principles li {
+    line-height: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 15px;
+}
+
