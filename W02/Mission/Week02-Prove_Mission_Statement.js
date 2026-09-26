@@ -8,9 +8,10 @@ function changeTheme() {
     let current = selectElem.value;
     if (current == 'dark') {
         document.body.classList.add('dark-mode');
-        document.body.style.footer.img = "url("
+        document.querySelector("footer img").src ="Week02-Prove_Mission_Statement_image/byui-logo-black.png";
     } else {
-        // code for changes to colors and logo
+        document.body.classList.remove('dark-mode');
+        document.querySelector("footer img").src ="Week02-Prove_Mission_Statement_image/byui-logo-blue.webp";
     }
 }           
 

@@ -79,6 +79,6 @@
 /* Dark mode */
 
 body.dark-mode {
-    background-color: black;
+    background-color: rgb(52, 52, 52);
     color: white;
 }
