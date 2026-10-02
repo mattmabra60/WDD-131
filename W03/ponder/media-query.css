@@ -1,0 +1,27 @@
+/* mobile first design */
+div {
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* when the screen is 600px and larger */
+@media screen and (min-width: 600px) {
+    body{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    div{
+        height: 400px;
+        width: 400px;
+        background-color: red;
+    }
+}
