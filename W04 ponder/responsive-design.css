@@ -43,8 +43,8 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration: none;
-  color: #616061;
+    text-decoration: none;
+    color: #616061;
 }
 
 .menu-btn {
