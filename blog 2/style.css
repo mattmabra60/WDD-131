@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#blog-title {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    font-family: "Lora", Georgia, serif;
+    color: #3b1f3a;
+}
+
+#main-nav {
+    padding: 1rem 2rem 1rem 0;
+    text-align: right;
+    border-top: 2px solid #f5c98f;
+    border-bottom: 2px solid #f5c98f;
+}
+
+#main-nav a {
+    margin-left: 2rem;
+    color: rgb(177, 1, 1);
+    text-decoration: none;
+}
+
+header::after {
+    content: "";
+    display: block;
+    height: 3rem;
+    border-bottom: 2px solid #f5c98f;
+}
+
+.book-review {
+    display: grid;
+    grid-template-columns: 10% 65% 25%;
+    padding: 1.5rem 0;
+}
+
+.meta {
+    grid-column: 1 / -1;
+    margin: 0.5rem 0;
+    padding-right: 1em;
+    text-align: right;
+}
+
+.date {
+    font-style: italic;
+    margin-top: 2.25em;
+}
+
+.book-title {
+    grid-column: 2;
+    font-family: "Lora", Georgia, serif;
+    color: rgb(177, 1, 1);
+}
+
+.book-review img {
+    grid-column: 2;
+    justify-self: center;
+    width: 40%;
+}
+
+.review {
+    grid-column: 2;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    border-top: 2px solid #f5c98f;
+}
+
+@media (min-width: 600px) {
+    header::after {
+        display: none;
+    }
+
+    .book-review {
+        grid-template-columns: 2fr 3fr 1fr;
+        grid-template-rows: repeat(4, auto) 1fr auto;
+    }
+
+    .meta {
+        grid-column: 1;
+        padding-right: 1.5rem;
+    }
+
+    .book-review::before {
+        content: "";
+        grid-column: 2;
+        grid-row: 1 / 7;
+        border-left: 2px solid #f5c98f;
+    }
+
+    .book-title,
+    .book-review img,
+    .review {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .book-title {
+        grid-row: 1;
+    }
+
+    .book-review img {
+        grid-row: 2 / 6;
+    }
+
+    .review {
+        grid-row: 6;
+    }
+}
