@@ -1,0 +1,89 @@
+body {
+  font-family: "Palatino Linotype", Palatino, serif;
+  background: #f0f4f8;
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.card {
+  background: #313131;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+  width: 400px;
+  max-width: fit-content;
+  margin: 100px auto;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 15px 15px 0 0;
+}
+
+.name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: -4px 0 20px 0;
+  color: white;
+  padding: 15px 0 15px 35px;
+  background-color: #5d747b;
+}
+
+.stats {
+  margin: 10px 15px 7px 35px;
+  text-align: left;
+}
+
+.stats p {
+  margin: 5px 0;
+  color: #f0f4f8;
+}
+
+.status {
+  margin: 10px 35px 0 35px;
+  min-height: 1.5em;
+  color: #ffb4a8;
+  font-weight: bold;
+}
+
+.buttons {
+  text-align: center;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #5d747b;
+  color: white;
+  font-family: "Palatino Linotype", Palatino, serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+button:hover {
+  background-color: #58605a;
+}
+
+button:focus-visible {
+  outline: 3px solid #f0f4f8;
+  outline-offset: 3px;
+}
+
+button:disabled {
+  background-color: #4a4a4a;
+  color: #cfcfcf;
+  cursor: not-allowed; /* if you are wondering yes W3 schools coming in clutch for this one had no idea you could even do this */
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Author" content="Matthew Abraham">
+  <meta name="title" content="Character Card | Elowen Ashgrove, Ranger">
+  <title>Character Card</title>
+
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Character Card | Elowen Ashgrove, Ranger">
+<meta property="og:description" content="An interactive JavaScript character card.">
+<meta property="og:url" content="https://yourusername.github.io/charactercard/">
+<meta property="og:image" content="https://yourusername.github.io/charactercard/images/charactercard/favicon_io/android-chrome-192x192.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Character Card | Elowen Ashgrove, Ranger">
+<meta name="twitter:description" content="An interactive JavaScript character card.">
+<meta name="twitter:image" content="https://yourusername.github.io/charactercard/images/charactercard/favicon_io/android-chrome-192x192.png">
+
+  <!-- Favicon and one Apple Touch Icon (from favicon.io) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="javascript.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1 class="visually-hidden">Character card</h1>
+    <section class="card" aria-labelledby="character-name">
+      <img class="image" id="character-image" src="images/Misty Kingdom Elf Ranger.png" alt="Elowen Ashgrove, an elf ranger in a misty kingdom" width="400" height="400">
+      <h2 class="name" id="character-name"></h2>
+
+      <div class="stats">
+        <p>Class: <span id="character-class"></span></p>
+        <p>Level: <span id="character-level"></span></p>
+        <p>Health: <span id="character-health"></span></p>
+      </div>
+
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+
+      <div class="buttons">
+        <button type="button" id="fullRest-btn">Rest</button>
+        <button type="button" id="heal-btn">Heal</button>
+        <button type="button" id="attacked-btn">Attacked</button>
+        <button type="button" id="levelup-btn">Level Up</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
