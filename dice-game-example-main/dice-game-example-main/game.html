@@ -17,8 +17,41 @@
             height: 50px;
         }   
 
-        #gameboard {
+        /* color stuffs */
+        #colorPicker {
             margin-top: 200px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        #colorPicker label {
+            font-weight: bold;
+            font-size: 30px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        #color {
+            appearance: none;
+            background-color: white;
+            color: black;
+            font-size: 1rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 10px 36px 10px 14px;
+            border: 2px solid black;
+            border-radius: 5px;
+            box-shadow: 0 3px black;
+            cursor: pointer;
+            transition: all 0.1s ease;
+        }
+
+        #color:active {
+            transform: translateY(2px);
+            box-shadow: 0 1px black;
+        }
+
+        #gameboard {
+            margin-top: 100px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
@@ -70,6 +103,27 @@
     </style>
 </head>
 <body>
+    <!-- this be for the drop down menu colors -->
+    <div id="colorPicker">
+        <label for="color">Dice color</label>
+            <select id="color" name="dieColor">
+                <option value="white">White</option>
+                <option value="white_alt">White (alt)</option>
+                <option value="white_shadow">White (shadow)</option>
+                <option value="grey">Grey</option>
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="lime">Lime</option>
+                <option value="green">Green</option>
+                <option value="cyan">Cyan</option>
+                <option value="cyan_alt">Cyan (alt)</option>
+                <option value="blue">Blue</option>
+                <option value="purple">Purple</option>
+                <option value="pink">Pink</option>
+                <option value="hot_pink">Hot pink</option>
+            </select>
+    </div>
     <div id="gameboard">
         <img class="dice1" src="assets/white_dice_1.gif">
         <img class="dice2" src="assets/white_dice_2.gif">

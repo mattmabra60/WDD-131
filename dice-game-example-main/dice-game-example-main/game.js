@@ -3,11 +3,12 @@
 
 // Brother Warner I am sad, mostly becuase It is 2am, but also becuase this broke me to implement without your big brain
 // you can change the color to whatever "blue", "red", "green", "white_alt" 
-const DICE_COLOR = "white";
+// const DICE_COLOR = "white";
 
 const ROLL_TIME = 600;      // how long the "rolling" flicker lasts (ms)
-const FLICKER_SPEED = 80;   // how often the faces change while rolling (ms)
+const FLICKER_SPEED = 80;   // how often the faces change while rolling (ms)'
 
+const colorSelect = document.getElementById("color");
 const diceImages = document.querySelectorAll("#gameboard img");
 const holdBoxes = document.querySelectorAll('#gameboard input[type="checkbox"]');
 const rollButton = document.getElementById("rollButton");
@@ -22,7 +23,7 @@ function rollDie() {
 
 // gives the face of the die with the value
 function showDie(index, value) {
-  diceImages[index].src = `assets/${DICE_COLOR}_dice_${value}.gif`;
+  diceImages[index].src = `assets/${colorSelect.value}_dice_${value}.gif`;
   diceImages[index].alt = `Die ${index + 1}: ${value}`;
 }
 
@@ -70,6 +71,7 @@ function roll() {
   }, reducedMotion ? 0 : ROLL_TIME);
 }
 
+colorSelect.addEventListener("change", () => {values.forEach((value, index) => showDie(index, value));});
 rollButton.addEventListener("animationend", () => {rollButton.classList.remove("shake");});
 holdBoxes.forEach((box) => box.addEventListener("change", updateButtonColor));
 rollButton.addEventListener("click", roll);
