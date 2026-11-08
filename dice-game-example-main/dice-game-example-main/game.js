@@ -1,19 +1,16 @@
-// Dice game: 5 dice. Check a die to hold it; the Roll! button rerolls
-// every die that is NOT checked.
-
 // Brother Warner I am sad, mostly becuase It is 2am, but also becuase this broke me to implement without your big brain
-// you can change the color to whatever "blue", "red", "green", "white_alt" 
-// const DICE_COLOR = "white";
+// also forgive me I did use some AI to help with debugging but it was mostly on the roll function it was the one that 
+// reccomended the flicker and roll times
 
 const ROLL_TIME = 600;      // how long the "rolling" flicker lasts (ms)
-const FLICKER_SPEED = 80;   // how often the faces change while rolling (ms)'
+const FLICKER_SPEED = 80;   // how often the faces change while rolling (ms)
 
 const colorSelect = document.getElementById("color");
 const diceImages = document.querySelectorAll("#gameboard img");
 const holdBoxes = document.querySelectorAll('#gameboard input[type="checkbox"]');
 const rollButton = document.getElementById("rollButton");
 
-// Current value of each die (the HTML starts them showing 1 through 5).
+// Current value of each die (the HTML starts them showing 1 through 5)
 const values = [1, 2, 3, 4, 5];
 
 // Random whole number from 1 to 6 
@@ -36,7 +33,7 @@ function getRollingDice() {
   return rolling;
 }
 
-// Turn the button red when every die is held.
+// Turn the button red when every die is held
 function updateButtonColor() {
   const allHeld = Array.from(holdBoxes).every((box) => box.checked);
   rollButton.classList.toggle("all-held", allHeld);
@@ -45,7 +42,7 @@ function updateButtonColor() {
 // tie everyhting together to get the rolling   
 function roll() {
   const rolling = getRollingDice();
-    // Everything is held: shake the button instead of rolling.
+    // Everything is held: shake the button instead of rolling
   if (rolling.length === 0) {
     rollButton.classList.remove("shake");
     void rollButton.offsetWidth; // lets the shake restart if you click again quickly
@@ -53,7 +50,7 @@ function roll() {
     return;
   }
 
-  // Pick the final results now, then flicker random faces before showing them.
+  // Pick the final results now, then flicker random faces before showing them
   const finalValues = rolling.map(rollDie);
   const flicker = setInterval(() => {
     rolling.forEach((index) => showDie(index, rollDie()));
