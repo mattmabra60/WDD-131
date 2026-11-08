@@ -7,7 +7,6 @@ const character = {
   maxLevel: 20,
   image: "images/Misty Kingdom Elf Ranger.png",
   alt: "Elowen Ashgrove, an elf ranger in a misty kingdom",
-
   // In dnd a full rest brings your health all the way up
   rest() {
     if (this.health === this.maxHealth) {
