@@ -5,7 +5,7 @@ const character = {
   health: 100,
   maxHealth: 100,
   maxLevel: 20,
-  image: "images/Misty Kingdom Elf Ranger.webp",
+  image: "images/Misty Kingdom Elf Ranger.webp", width:"400px", height:"500px",
   alt: "Elowen Ashgrove, an elf ranger in a misty kingdom",
   // In dnd a full rest brings your health all the way up
   rest() {
